@@ -1,0 +1,73 @@
+.header{
+  background-color: chartreuse;
+  height:100px;
+}
+.grid-6__1{
+  box-sizing: border-box;
+  padding:10px;
+  border:1px solid;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: crimson;
+  &:hover{
+    background-color: darkgray;
+    color:black;
+  }
+}
+
+
+.content{
+  background-color: blanchedalmond;
+  position: relative;
+  height:calc(100vh - 100px);
+  box-sizing: border-box;
+  overflow: scroll;
+  text-align: center;
+  &__news{
+    text-decoration: none;
+    font-size: 35px;
+    border: 1px solid;
+    border-radius: 40px;
+    padding:5px;
+  }
+}
+.image1{
+  position: absolute;
+  display: block;
+  right: 0;
+}
+
+.image2{
+  position: absolute;
+  display: block;
+  left:0;
+}
+
+.image3{
+  position: absolute;
+  display:block;
+  right:0;
+  top:200px;
+}
+
+.image4{
+  position: absolute;
+  display: block;
+  right:0;
+  top:600px;
+}
+
+.image5{
+  position: absolute;
+  display: block;
+  left:0;
+  top:250px;
+}
+
+.content_post{
+  background-color: cadetblue;
+  height:450px;
+  box-sizing: border-box;
+  margin-top:30px;
+  position: relative;
+}

@@ -1,0 +1,19 @@
+.contents.row
+  .content_post{:style => "background-image: url(#{@tweet.image});"}
+    %span.title
+      = @tweet.title
+    .link
+      -if @tweet.link 
+        = link_to 'サイトのリンク', @tweet.link
+    = simple_format(@tweet.text)
+    %span 投稿者
+    = @tweet.user.nickname
+  .container
+    = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
+      = form.text_area :text, placeholder: "コメントする", rows: "5", class: "textbox"
+      = form.submit "SEND", class: "form__submit"
+  .comments
+    %h4 ＜コメント＞
+    - @comments.each do |comment|
+      %p.first-comment{"data-message-id":comment.id}
+        = comment.text
