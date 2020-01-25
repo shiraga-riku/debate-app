@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: debate-app_production
-  username: debate-app
-  password: <%= ENV['DEBATE-APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
