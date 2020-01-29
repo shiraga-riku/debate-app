@@ -2,7 +2,7 @@
   .container
     = form_with(model: @tweet, local: true) do |form|
       = form.text_field :title, placeholder: "タイトル"
-      = form.text_field :image, placeholder: "画像のURL"
+      = form.file_field :image, placeholder: "画像のURL"
       = form.text_field :link, placeholder: "気になるサイトのリンク"
       = form.text_area :text, placeholder: "内容" , rows: "10"
       = form.submit "投稿する"
