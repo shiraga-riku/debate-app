@@ -1,6 +1,7 @@
 $(function(){
   function buildHTML(comment){
     var html = `<p>
+                  ${comment.nickname}
                   ${comment.text}
                 </p>`
     return html;
