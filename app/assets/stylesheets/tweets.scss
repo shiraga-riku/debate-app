@@ -1,7 +1,12 @@
+*{
+  text-decoration: none;
+}
+
 .header{
   background-color: chartreuse;
   height:100px;
 }
+
 .grid-6__1{
   box-sizing: border-box;
   padding:10px;
@@ -75,3 +80,4 @@
 .image{
   background-size:100% 100%;
 }
+
