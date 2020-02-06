@@ -16,4 +16,5 @@
     %h4 ＜コメント＞
     - @comments.each do |comment|
       %p.first-comment{"data-message-id":comment.id}
+        = comment.user.nickname
         = comment.text
