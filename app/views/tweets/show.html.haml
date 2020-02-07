@@ -8,6 +8,7 @@
     = simple_format(@tweet.text)
     %span 投稿者
     = @tweet.user.nickname
+    = link_to "削除",tweet_path(@tweet.id),method: :delete
   .container
     = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
       = form.text_area :text, placeholder: "ディベートしよう", rows: "5", class: "textbox"
