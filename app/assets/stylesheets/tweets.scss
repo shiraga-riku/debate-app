@@ -22,7 +22,7 @@
 
 
 .content{
-  background-color: blanchedalmond;
+  background-image: url(https://beiz.jp/images_T/twinkle/twinkle_00025.jpg);
   position: relative;
   height:calc(100vh - 100px);
   box-sizing: border-box;
@@ -76,6 +76,8 @@
   margin-top:30px;
   position: relative;
   margin-bottom:20px;
+  border-radius: 30px;
+  text-align: center;
 }
 
 .image{
