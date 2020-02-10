@@ -12,7 +12,7 @@
         %h1.grid-6
           %a.grid-6__1{:href => "/"} debate
         - if user_signed_in? 
-          = link_to "ログアウト", destroy_user_session_path, method: :delete 
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout"
           = link_to  "投稿する", "/tweets/new", class:"post"
         - else 
           = link_to "ログイン", new_user_session_path

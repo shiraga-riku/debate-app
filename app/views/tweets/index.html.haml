@@ -18,6 +18,7 @@
           -if tweet.link 
             = link_to 'サイトのリンク', tweet.link
         = simple_format(tweet.text)
-        %span 投稿者
-        = tweet.user.nickname
+        .nickname
+          %span 投稿者
+          = tweet.user.nickname
     = paginate(@tweets)

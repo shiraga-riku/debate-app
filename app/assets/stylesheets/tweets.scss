@@ -2,16 +2,25 @@
   text-decoration: none;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .post{
   background-color: aqua;
   padding:30px;
   border-radius: 50px;
   position: absolute;
-  right:300px;
+  right:200px;
   top:30px;
   z-index: 1;
   font-size: 30px;
   color:black;
+}
+
+.logout{
+  position: absolute;
+  right:5px;
 }
 
 .header{
@@ -90,6 +99,12 @@
   margin-bottom:20px;
   border-radius: 30px;
   text-align: center;
+  overflow: scroll;
+  .nickname{
+    position: absolute;
+    right:10px;
+    bottom:10px;
+  }
 }
 
 .image{
