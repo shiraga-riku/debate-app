@@ -13,6 +13,10 @@
       -if user_signed_in?
         -if @tweet.user.id == current_user.id
           = link_to "削除",tweet_path(@tweet.id),method: :delete
+        -if Like.find_by(user_id:current_user.id,tweet_id:@tweet.id)
+          = link_to "ハート",tweet_like_path(tweet_id:@tweet.id,id:current_user.id),method: :delete
+        -else
+          = link_to "ハート",tweet_likes_path(@tweet.id),method: :post
   .container
     = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
       = form.text_area :text, placeholder: "ディベートしよう", rows: "5", class: "textbox"
