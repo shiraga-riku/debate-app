@@ -14,9 +14,11 @@
         -if @tweet.user.id == current_user.id
           = link_to "削除",tweet_path(@tweet.id),method: :delete
         -if Like.find_by(user_id:current_user.id,tweet_id:@tweet.id)
-          = link_to "ハート",tweet_like_path(tweet_id:@tweet.id,id:current_user.id),method: :delete
+          = link_to tweet_like_path(tweet_id:@tweet.id,id:current_user.id),method: :delete do
+            = icon('fas', 'heart', class: 'icon-heartred')
         -else
-          = link_to "ハート",tweet_likes_path(@tweet.id),method: :post
+          = link_to tweet_likes_path(@tweet.id),method: :post do
+            = icon('fas', 'heart', class: 'icon-heart')
   .container
     = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
       = form.text_area :text, placeholder: "ディベートしよう", rows: "5", class: "textbox"
