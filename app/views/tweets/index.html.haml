@@ -19,7 +19,7 @@
             = link_to 'サイトのリンク', tweet.link
         = simple_format(tweet.text)
         .likecount
-          いいね数
+          %span いいね数
           = tweet.likes.count
         .nickname
           %span 投稿者
