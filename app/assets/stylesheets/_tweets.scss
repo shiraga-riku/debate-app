@@ -44,6 +44,7 @@
 
 .content{
   background-image: url(https://beiz.jp/images_T/twinkle/twinkle_00025.jpg);
+  background-size:100% 100%;
   position: relative;
   height:calc(100vh - 100px);
   box-sizing: border-box;
@@ -104,6 +105,11 @@
     position: absolute;
     right:10px;
     bottom:10px;
+  }
+  .likecount{
+    position: absolute;
+    right:10px;
+    bottom:30px;
   }
 }
 

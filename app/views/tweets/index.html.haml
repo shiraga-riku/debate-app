@@ -18,6 +18,9 @@
           -if tweet.link 
             = link_to 'サイトのリンク', tweet.link
         = simple_format(tweet.text)
+        .likecount
+          いいね数
+          = tweet.likes.count
         .nickname
           %span 投稿者
           = tweet.user.nickname
